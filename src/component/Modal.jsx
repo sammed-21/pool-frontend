@@ -17,7 +17,7 @@ const Modal  = ({
         <Dialog.Overlay
           className="
       bg-black/30
-      
+      z-50
       fixed inset-0"
         >
           <Dialog.Content

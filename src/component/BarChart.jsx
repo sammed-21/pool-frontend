@@ -60,8 +60,8 @@ const BarChart = ({ data, highlight, domain }) => {
   };
 
   return (
-    <div className="w-full h-full relative">
-      <Bar data={barData}  options={options} />
+    <div className="w-full z-10 relative">
+      <Bar data={barData} style={{ height: '160px' }} options={options} />
     </div>
   );
 };

@@ -57,9 +57,9 @@ function App() {
         <div className="flex w-full justify-between items-center p-4"><h1 className="text-[20px]  text-white font-medium">Add liquidity</h1>
           <img src={setting} alt="image" /></div>
 
-        <div className="flex w-full gap-4 flex-col px-4 ">
+        <div className="flex w-full gap-[11px] flex-col px-4 ">
           <h2 className="text-base text-start w-full  text-white font-medium">Select pair</h2>
-          <div className="flex flex-row gap-3 w-full w-full">
+          <div className="flex flex-row gap-[11px] w-full w-full">
             <h1 className="text-white cursor-pointer hover:bg-[#1B1B1B] justify-between items-center font-semibold text-[20px] flex gap-3 w-full px-4 py-2 border-[1px] border-gray-400/30 rounded-2xl " onClick={() => handleModal1()}>
               {selectedTokens.token1 ?
                 <span className="flex gap-3 items-center justify-start">
@@ -85,7 +85,7 @@ function App() {
               <img src={downdarrwo} className="w-5 object-cover h-fit" alt="image" />
             </h1>
           </div>
-          <div className={`w-full  h-full relative ${(selectedTokens && selectedTokens.token1 === null && selectedTokens.token2 === null) ? 'opacity-40 pointer-events-none' : ''}`}>
+          <div className={`w-full flex flex-col gap-[11px] h-full relative ${(selectedTokens && selectedTokens.token1 === null && selectedTokens.token2 === null) ? 'opacity-40 pointer-events-none' : ''}`}>
             <div className="min-w-full  p-3 bg-[#131313]  rounded-xl border-[1px] border-gray-400/40 text-white  " style={{ textAlign: "left" }}>
               <div class=" w-full">
                 <div class="flex items-center   justify-between min-w-full">
@@ -102,7 +102,7 @@ function App() {
               </div>
             </div>
             {setShowFee &&
-              <div className="w-full text-white flex gap-2 h-full ">
+              <div className="w-full text-white  flex gap-2 h-full ">
                 {feeData.map((data, index) => (
                   <div key={index} className="w-full  h-full  cursor-pointer relative " onClick={() => handleFeeChage(data)}>
 
@@ -123,7 +123,7 @@ function App() {
               <div className="min-w-full  p-3 bg-[#1B1B1B] flex justify-between  rounded-xl border-[1px] border-gray-400/40 text-white  " style={{ textAlign: "left" }}>
               <div className="flex flex-col gap-3 justify-start items-start w-fit">
               <input
-              className="bg-transparent text-[22px] font-semibold "
+              className="bg-transparent outline-none text-[22px] font-semibold "
               font-size="20px"
               inputmode="decimal"
               autocomplete="off"
@@ -134,7 +134,7 @@ function App() {
                   minlength="1"
                   maxlength="79"
                   spellcheck="false"
-                  value={inputValues1[1]}
+                  value={inputValues1}
                   onChange={(evt) => {
                     const value = evt.target.value;
 
@@ -163,7 +163,7 @@ function App() {
               <div className="min-w-full flex items-center justify-between p-3 bg-[#1B1B1B]  rounded-xl border-[1px] border-gray-400/40 text-white  " style={{ textAlign: "left" }}>
              <div className="flex flex-col gap-3 justify-start items-start w-fit">
              <input
-             className="bg-transparent text-[22px] font-semibold "
+             className="bg-transparent outline-none  text-[22px] font-semibold "
                   font-size="20px"
                   inputmode="decimal"
                   autocomplete="off"
