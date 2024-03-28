@@ -245,7 +245,7 @@ const RangeSlider = (props) => {
 
                   setInputValues(newValues);
                 }}
-                style={{ position: "absolute", zIndex:"999",bottom: "-12px", width: "94%" }}
+                style={{ position: "absolute",bottom: "-12px", width: "94%" }}
               >
                 <Rail>{({ getRailProps }) => <MuiRail getRailProps={getRailProps} />}</Rail>
                 <Handles>
